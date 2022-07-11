@@ -1,18 +1,21 @@
 import { amadeus } from "../../../db/index.js";
 
-const checkinLinks = async (req, res, next) => {
+const referenceDataUrlsCheckinLinks = async (req, res, next) => {
+    const { airlineCode } = req.body;
+    const data = {
+        airlineCode,
+    };
     try {
-        const response = await amadeus.referenceData.urls.checkinLinks.get({
-            airlineCode: "BA",
-        });
+        // Flight Checkin Links
+        const response = await amadeus.referenceData.urls.checkinLinks.get(
+            data
+        );
         console.log(response);
         return res.status(200).json(response.data);
     } catch (error) {
         console.log(error);
-        return res.status(500).json({
-            message: error.message,
-        });
+        return res.status(500).json(error.response.result);
     }
 };
 
-export { checkinLinks };
+export { referenceDataUrlsCheckinLinks };

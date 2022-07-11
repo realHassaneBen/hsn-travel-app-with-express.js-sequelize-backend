@@ -3,7 +3,7 @@ import airport from "./airport.js";
 import airline from "./airline.js";
 import booking from "./booking.js";
 import shopping from "./shopping/index.js";
-3;
+import travel from "./travel/index.js";
 import referenceData from "./referenceData/index.js";
 
 import { Router } from "express";
@@ -16,5 +16,6 @@ router.use("/airline", airline);
 router.use("/booking", booking);
 router.use("/shopping", shopping);
 router.use("/referenceData", referenceData);
+router.use("/travel", travel);
 
 export default router;

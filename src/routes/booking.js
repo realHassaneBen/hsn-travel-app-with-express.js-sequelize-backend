@@ -1,14 +1,14 @@
 import { Router } from "express";
 import {
-    createflightOrder,
-    deleteflightOrder,
-    getflightOrder,
+    createBookingFlightOrders,
+    deleteBookingFlightOrder,
+    getBookingFlightOrder,
 } from "../controllers/Booking.js";
 
 const router = Router();
 
-router.get("/flightOrders", getflightOrder);
-router.post("/flightOrders", createflightOrder);
-router.delete("/flightOrders", deleteflightOrder);
+router.get("/flightOrders", getBookingFlightOrder);
+router.post("/flightOrders", createBookingFlightOrders);
+router.delete("/flightOrders", deleteBookingFlightOrder);
 
 export default router;

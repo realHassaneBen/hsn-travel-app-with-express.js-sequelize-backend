@@ -1,6 +1,6 @@
 import { amadeus } from "../../db/index.js";
 
-const flightDestinations = async (req, res, next) => {
+const ShoppingFlightDestinations = async (req, res, next) => {
     try {
         const response = await amadeus.shopping.flightDestinations.get({
             origin: "MAD",
@@ -11,7 +11,7 @@ const flightDestinations = async (req, res, next) => {
         return res.status(500).json(error.response.result);
     }
 };
-const flightDates = async (req, res, next) => {
+const ShoppingFlightDates = async (req, res, next) => {
     try {
         const response = await amadeus.shopping.flightDates.get({
             origin: "MAD",
@@ -24,7 +24,7 @@ const flightDates = async (req, res, next) => {
     }
 };
 
-const flightOffersSearch = async (req, res, next) => {
+const shoppingFlightOffersSearch = async (req, res, next) => {
     try {
         const response = await amadeus.shopping.flightOffersSearch.get({
             originLocationCode: "ALG",
@@ -39,4 +39,8 @@ const flightOffersSearch = async (req, res, next) => {
     }
 };
 
-export { flightDestinations, flightDates, flightOffersSearch };
+export {
+    ShoppingFlightDestinations,
+    ShoppingFlightDates,
+    shoppingFlightOffersSearch,
+};

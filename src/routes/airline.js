@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { destinations } from "../controllers/Airline.js";
+import { airlineDestinations } from "../controllers/Airline.js";
 
 const router = Router();
 
-router.get("/destinations", destinations);
+router.get("/destinations", airlineDestinations);
 
 export default router;

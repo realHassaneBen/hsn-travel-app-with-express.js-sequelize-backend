@@ -1,6 +1,6 @@
 import { amadeus } from "../../../db/index.js";
 
-const flightAvailabilities = async (req, res, next) => {
+const ShoppingAvailabilityFlightAvailabilities = async (req, res, next) => {
     const flightAvailabilitiesData = {};
     try {
         const response =
@@ -14,4 +14,4 @@ const flightAvailabilities = async (req, res, next) => {
     }
 };
 
-export { flightAvailabilities };
+export { ShoppingAvailabilityFlightAvailabilities };

@@ -1,6 +1,6 @@
 import { amadeus } from "../db/index.js";
 
-const destinations = async (req, res, next) => {
+const airlineDestinations = async (req, res, next) => {
     try {
         const response = await amadeus.airline.destinations.get({
             airlineCode: "BA",
@@ -15,4 +15,4 @@ const destinations = async (req, res, next) => {
     }
 };
 
-export { destinations };
+export { airlineDestinations };

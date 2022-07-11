@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { checkinLinks } from "../../../controllers/ReferenceData/URLS/index.js";
+import { referenceDataUrlsCheckinLinks } from "../../../controllers/ReferenceData/URLS/index.js";
 
 const router = Router();
 
-router.get("/checkinLinks", checkinLinks);
+router.get("/checkinLinks", referenceDataUrlsCheckinLinks);
 
 export default router;

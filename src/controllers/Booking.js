@@ -1,6 +1,6 @@
 import { amadeus } from "../db/index.js";
 
-const getflightOrder = async (req, res, next) => {
+const getBookingFlightOrder = async (req, res, next) => {
     const { flightOrderID } = req.query;
     try {
         // Retrieve flight order with ID 'XXX'. This ID comes from the
@@ -14,7 +14,7 @@ const getflightOrder = async (req, res, next) => {
     }
 };
 
-const createflightOrder = async (req, res, next) => {
+const createBookingFlightOrders = async (req, res, next) => {
     try {
         const response = await amadeus.booking.flightOrders.post(
             JSON.stringify({
@@ -31,7 +31,7 @@ const createflightOrder = async (req, res, next) => {
     }
 };
 
-const deleteflightOrder = async (req, res, next) => {
+const deleteBookingFlightOrder = async (req, res, next) => {
     const { flightOrderID } = req.query;
     try {
         // Cancel flight order with ID 'XXX'. This ID comes from the
@@ -45,4 +45,8 @@ const deleteflightOrder = async (req, res, next) => {
     }
 };
 
-export { getflightOrder, createflightOrder, deleteflightOrder };
+export {
+    getBookingFlightOrder,
+    createBookingFlightOrders,
+    deleteBookingFlightOrder,
+};
