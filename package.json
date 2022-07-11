@@ -4,6 +4,7 @@
   "description": "hsn travel app with express.js and sequelize to handle database",
   "main": "src/index.js",
   "license": "MIT",
+  "type": "module",
   "private": true,
   "repository": {
     "url": "https://github.com/realHassaneBen/hsn-travel-app-with-express.js-sequelize-backend.git",
@@ -18,6 +19,7 @@
   "dependencies": {
     "@faker-js/faker": "^7.2.0",
     "ajv": "^8.11.0",
+    "amadeus": "^6.0.0",
     "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "cloudinary": "^1.30.0",
